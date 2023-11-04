@@ -1,0 +1,735 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:IE>
+  <head>
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+    <title>RuneScape - the massive online adventure game by Jagex Ltd</title>
+    <style type="text/css">
+      body {
+        background: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        background-image: url("./static/images/http.jpg");
+        background-position: top center;
+        background-repeat: repeat-y;
+        text-align: center;
+        margin: 0;
+      }
+      div#body {
+        width: 765px;
+        margin: 10px auto 10px auto;
+        text-align: left;
+        position: relative;
+      }
+
+      div,
+      td {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      img {
+        border: 0;
+      }
+      img a:hover {
+        text-decoration: none;
+      }
+      .titleframe {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 4px;
+        text-align: center;
+      }
+      .frame {
+        width: 753px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 4px;
+      }
+      .tandc {
+        clear: both;
+        font-size: 11px;
+        text-align: center;
+      }
+      .scroll {
+        color: black;
+      }
+      .heading {
+        text-align: center;
+        margin: 6px;
+      }
+      .heading span {
+        width: 125px;
+        margin: 0 auto;
+        display: block;
+        background-image: url(http://www.runescape.com/lang/en/aff/runescape/img/smbrownback.jpg);
+        border: 3px solid #3e3b23;
+        border-top: 3px solid #7c774a;
+        border-left: 3px solid #7c774a;
+        background-color: #4d422e;
+        padding: 3px 10px 3px 10px;
+      }
+
+      a {
+        color: #90c040;
+        text-decoration: none;
+      }
+      .scroll a {
+        color: #7b4f17;
+        font-weight: bold;
+      }
+      .e {
+        border: 2px solid #382418;
+        background-color: black;
+      }
+
+      .wide_e {
+        border: 2px solid #382418;
+        background-color: black;
+      }
+
+      div.horizontalscroll {
+        width: 765px;
+        height: 159px;
+        overflow: hidden;
+        margin: 5px 0;
+        background-color: #c2ab79;
+        background-image: url("http://www.runescape.com/lang/en/aff/runescape/img/scroll/horizontal_scroll.gif");
+        position: relative;
+      }
+      div.horizontalscroll-content {
+        margin: 15px 40px;
+        color: #000000;
+        position: relative;
+      }
+      div.widescroll {
+        width: 735px;
+        background-color: #c2ab79;
+        margin: 0 10px 0 15px;
+        position: relative;
+      }
+      div.widescroll-bgimg {
+        width: 745px;
+        position: relative;
+        margin: 0 -5px;
+        background-image: url("http://www.runescape.com/lang/en/aff/runescape/img/scroll/backdrop_745.gif");
+        background-repeat: repeat-y;
+      }
+      div.widescroll-content {
+        padding: 25px 10px;
+        color: #000000;
+        position: relative;
+        margin: 0 5px;
+      }
+      img.widescroll-top {
+        position: relative;
+        top: 25px;
+        padding: 0;
+        margin: 0;
+        z-index: 100;
+        display: block;
+      }
+      img.widescroll-bottom {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        top: -25px;
+        display: block;
+      }
+      div.widescroll-content a,
+      div.horizontalscroll-content a,
+      div.narrowscroll-content a {
+        color: #7b4f17;
+        font-weight: bold;
+      }
+      div.narrowscroll-bgimg {
+        width: 457px;
+        position: relative;
+        margin: 0 -5px;
+        background-image: url("http://www.runescape.com/lang/en/aff/runescape/img/scroll/scroll457t.gif");
+        background-repeat: repeat-y;
+      }
+      div.narrowscroll-bg {
+        width: 447px;
+        background-color: #c2ab79;
+        margin-left: 10px;
+      }
+      div.narrowscroll-content {
+        padding: 25px 10px;
+        color: #000000;
+        position: relative;
+        margin: 0 5px;
+      }
+      div.narrowscroll-content td {
+        color: black;
+      }
+      img.narrowscroll-top {
+        position: relative;
+        top: 25px;
+        padding: 0;
+        margin: 0;
+        z-index: 100;
+        display: block;
+      }
+      img.narrowscroll-bottom {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        top: -25px;
+        display: block;
+      }
+    </style>
+    <style type="text/css">
+      .topimg {
+        margin-left: 10px;
+        width: 200px;
+        height: 100px;
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        text-align: right;
+      }
+      fieldset {
+        background-color: black;
+      }
+      fieldset.menu {
+        border: 2px solid #382418;
+        width: 260px;
+        margin: 0 0 10px 0;
+        display: block;
+        padding: 0 5px 5px 5px;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+      }
+      fieldset.menu legend {
+        font-weight: bold;
+        color: white;
+      }
+      fieldset.menu ul {
+        padding: 0;
+        margin: 0;
+      }
+      fieldset.menu ul li {
+        list-style: square inside;
+        width: 220px;
+      }
+      .news dd {
+        padding: 0 0 1em 0;
+        margin: 0;
+        height: 50px;
+      }
+      dl.news > dd {
+        height: auto;
+        min-height: 50px;
+      }
+      .news dt {
+        font-weight: bold;
+        clear: right;
+      }
+      .newsdate {
+        float: right;
+      }
+      .news a {
+        margin-top: 0.5em;
+      }
+      .newscontainer {
+        margin-left: 290px;
+        margin-bottom: 110px;
+      }
+      img {
+        border: 0;
+      }
+      .buttons {
+        width: 457px;
+        height: 110px;
+        position: relative;
+        margin: 0;
+      }
+      .buttons a {
+        display: block;
+        position: absolute;
+        width: 180px;
+        height: 80px;
+        margin: 5px;
+        background: #808080;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        border: 5px outset #909090;
+      }
+      .buttons a:hover {
+        background: #a0a0a0;
+        border-color: #ffffff;
+      }
+      #button-left {
+        left: 15px;
+        top: 0px;
+      }
+      #button-left span.lev1 {
+        background-image: url("http://www.runescape.com/lang/en/aff/runescape/img/title2/doublebutton_create.gif");
+      }
+      #button-right {
+        right: 15px;
+        top: 0px;
+      }
+      #button-right span.lev1 {
+        background-image: url("http://www.runescape.com/lang/en/aff/runescape/img/title2/doublebutton_play.gif");
+      }
+      span.lev1 {
+        display: block;
+        cursor: pointer;
+        cursor: hand;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 200px;
+        height: 100px;
+      }
+      a:hover span.lev1 {
+        background-position: 0 100px;
+      }
+      * html fieldset.menu {
+        position: relative;
+        padding-top: 10px;
+        display: block;
+        margin-top: 15px;
+      }
+      * html fieldset.menu legend {
+        position: absolute;
+        top: -7px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="body">
+      <div>
+        <div style="text-align: center; margin-bottom: 10px">
+          <img src="./static/images/http (25).gif" alt="RuneScape" /><br />There
+          are currently 110411 people playing!
+        </div>
+      </div>
+      <div class="left">
+        <fieldset
+          class="menu"
+          style="background-image: url('./static/images/http\ \(33\).gif')"
+        >
+          <legend>RuneScape</legend>
+          <ul>
+            <li
+              style="list-style-image: url('./static/images/http\ \(30\).gif')"
+            >
+              <a href="#">Create a free account (New user)</a>
+            </li>
+            <li
+              style="list-style-image: url('./static/images/http\ \(3\).gif')"
+            >
+              <a href="#">Play RuneScape (Existing user)</a>
+            </li>
+            <li
+              style="list-style-image: url('./static/images/http\ \(1\).gif')"
+            >
+              <a href="#">View in-game screenshots</a>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset
+          class="menu"
+          style="background-image: url('./static/images/http\ \(18\).gif')"
+        >
+          <legend>Knowledge Base</legend>
+          <ul>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Explore the knowledge base</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Getting started guide</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Read our rules</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Read the manual</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Get hints for a quest</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Safety & Security guidelines</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Customer Support</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Comment on our service</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Report a bug/fault</a>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset
+          class="menu"
+          style="background-image: url('./static/images/http\ \(51\).gif')"
+        >
+          <legend>Latest Poll</legend>
+          How do you like new weapons to be introduced to the game?
+          <ul>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Vote in this poll (Members only)</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">View previous polls</a>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset
+          class="menu"
+          style="background-image: url('./static/images/http\ \(14\).gif')"
+        >
+          <legend>Website Features</legend>
+          <ul>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">View the world map</a>
+            </li>
+            <li
+              style="list-style-image: url('./static/images/http\ \(20\).gif')"
+            >
+              <a href="#">View the hiscores</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Discuss the game on the forums</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Read stories and letters</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Download extra files</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Jagex Shop</a>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset
+          class="menu"
+          style="background-image: url('./static/images/http\ \(41\).gif')"
+        >
+          <legend>Membership</legend>
+          <ul>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Benefits of membership</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Start a new subscription</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Extend an existing subscription</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Cancel an existing subscription</a>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset
+          class="menu"
+          style="background-image: url('./static/images/http\ \(5\).gif')"
+        >
+          <legend>Account Management</legend>
+          <ul>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Read your messages from Jagex</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Change your password</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Set new recovery questions</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Cancel recovery questions</a>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset
+          class="menu"
+          style="background-image: url('./static/images/http\ \(8\).gif')"
+        >
+          <legend>Account Recovery</legend>
+          <ul>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Recover a lost password</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Recover a locked account</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Track a recovery request</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Appeal a ban</a>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset
+          class="menu"
+          style="background-image: url('./static/images/http\ \(7\).gif')"
+        >
+          <legend>Player Moderators</legend>
+          <ul>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Visit the player moderator centre</a>
+            </li>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">Find out about player mods</a>
+            </li>
+          </ul>
+          <br />
+        </fieldset>
+        <fieldset class="menu">
+          <legend>RuneScape Classic</legend>
+          <ul>
+            <li style="list-style-image: url('./static/images/http (20).gif')">
+              <a href="#">RuneScape Classic</a>
+            </li>
+          </ul>
+        </fieldset>
+        <a href="#" target="_top"
+          ><img src="./static/images/http (24).gif" alt="Jagex Software"
+        /></a>
+      </div>
+      <div class="newscontainer">
+        <div class="buttons">
+          <a href="buylink" class="button" id="button-left"
+            ><span class="lev1"></span><br style="line-height: 200%" />Buy
+            Now</a
+          >
+          <a href="chartlink" class="button" id="button-right"
+            ><span class="lev1"></span><br style="line-height: 200%" />Chart</a
+          >
+        </div>
+        <img
+          class="narrowscroll-top"
+          src="./static/images/http (23).gif"
+          alt=""
+          width="466"
+          height="50"
+        />
+        <div class="narrowscroll-bg">
+          <div class="narrowscroll-bgimg">
+            <div class="narrowscroll-content">
+              <dl class="news scroll">
+                <dt style="text-align: center">
+                  <img src="./static/images/http (12).gif" alt="Recent News" />
+                </dt>
+                <dt>&nbsp;</dt>
+                <dt>
+                  <span class="newsdate">10-May-2006</span>The New QuestHelp
+                  System
+                </dt>
+                <dd>
+                  <table width="100%">
+                    <tr>
+                      <td style="text-align: justify; vertical-align: top">
+                        Today we are proud to announce the launch of our new
+                        QuestHelp system! The system looks at your current
+                        progress in the game to identify your exact position
+                        within a quest and then offers hints on how to get past
+                        the point you are currently stuck at. It offers a choice
+                        of either detailed or cryptic hints which are designed
+                        to get you thinking in the right direction, but still
+                        allow you to enjoy solving the puzzle for yourself.
+                      </td>
+                      <td
+                        style="
+                          padding-left: 1em;
+                          text-align: right;
+                          vertical-align: top;
+                        "
+                      >
+                        <img
+                          width="50"
+                          height="50"
+                          src="./static/images/http (10).gif"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                  <div style="margin-top: 0.5em">
+                    <a href="#">Read more...</a>
+                  </div>
+                </dd>
+                <dt>
+                  <span class="newsdate">03-May-2006</span>RuneScape - Better
+                  than ever!
+                </dt>
+                <dd>
+                  <table width="100%">
+                    <tr>
+                      <td style="text-align: justify; vertical-align: top">
+                        We are happy to announce that with the success of the
+                        Knowledge Base and a large recruitment drive, we are now
+                        able to assign more Jagex Moderators to remove
+                        disruptive players from the game - resulting in our
+                        being more able to make RuneScape a better place to play
+                        for your good selves... read on...
+                      </td>
+                      <td
+                        style="
+                          padding-left: 1em;
+                          text-align: right;
+                          vertical-align: top;
+                        "
+                      >
+                        <img
+                          width="50"
+                          height="50"
+                          src="./static/images/http (13).gif"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                  <div style="margin-top: 0.5em">
+                    <a href="#">Read more...</a>
+                  </div>
+                </dd>
+                <dt>
+                  <span class="newsdate">02-May-2006</span>Return of the Wise
+                  Old Man!
+                </dt>
+                <dd>
+                  <table width="100%">
+                    <tr>
+                      <td style="text-align: justify; vertical-align: top">
+                        Join the fight against an army of ravaging sea trolls to
+                        save a struggling fishing colony on the edge of the
+                        explored world! Battle alongside the world-famous Wise
+                        Old Man of Draynor Village in his final great adventure!
+                        Catch a new kind of fish!
+                      </td>
+                      <td
+                        style="
+                          padding-left: 1em;
+                          text-align: right;
+                          vertical-align: top;
+                        "
+                      >
+                        <img
+                          width="50"
+                          height="50"
+                          src="./static/images/http (4).gif"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                  <div style="margin-top: 0.5em">
+                    <a href="#">Read more...</a>
+                  </div>
+                </dd>
+                <dt>
+                  <span class="newsdate">02-May-2006</span>Behind the Scenes -
+                  May
+                </dt>
+                <dd>
+                  <table width="100%">
+                    <tr>
+                      <td style="text-align: justify; vertical-align: top">
+                        Hi, and welcome to the Behind the Scenes document for
+                        May! This month sees a major rework of the technical
+                        side of the game, with faster download speeds and
+                        general improvement to the way you connect to the game.
+                        We will also see two amazing quests. The first features
+                        the much loved Wise Old Man of Draynor Village, in which
+                        the player will actually fight side by side with this
+                        misunderstood enigma! The second continues the popular
+                        Miscellania storyline and offers new rewards for getting
+                        the Etceterians on your side, as well as a rework of the
+                        existing Miscellania rewards. With other updates
+                        featuring clockwork toys, fairground grabbing claws and
+                        rocking chairs, we know you won�t be disappointed!
+                      </td>
+                      <td
+                        style="
+                          padding-left: 1em;
+                          text-align: right;
+                          vertical-align: top;
+                        "
+                      >
+                        <img
+                          width="50"
+                          height="50"
+                          src="./static/images/http (17).gif"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                  <div style="margin-top: 0.5em">
+                    <a href="#">Read more...</a>
+                  </div>
+                </dd>
+                <dt>
+                  <span class="newsdate">24-Apr-2006</span>Readers' Letters -
+                  April
+                </dt>
+                <dd>
+                  <table width="100%">
+                    <tr>
+                      <td style="text-align: justify; vertical-align: top">
+                        April's edition of the Postbag from the Hedge is now
+                        out! This month, the letters page tackles the burning
+                        issues that are the mysterious lands that lie beyond
+                        Port Phasmatys, the old &quot;black hole&quot;, beards
+                        that talk, and even a chat with the mime - well, sort
+                        of... and more!
+                      </td>
+                      <td
+                        style="
+                          padding-left: 1em;
+                          text-align: right;
+                          vertical-align: top;
+                        "
+                      >
+                        <img
+                          width="50"
+                          height="50"
+                          src="./static/images/http (31).gif"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                  <div style="margin-top: 0.5em">
+                    <a href="#">Read more...</a>
+                  </div>
+                </dd>
+              </dl>
+              <div class="right" style="margin-bottom: 0.5em">
+                <a href="#">Browse the news archives</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="narrowscroll-bottom"
+          src="./static/images/http (23).gif"
+          alt=""
+          width="466"
+          height="50"
+        />
+      </div>
+      <div class="tandc">
+        This webpage and its contents are copyright 1999 - 2006 Jagex Ltd.<br />
+        To use our service you must agree to our
+        <a href="#" class="c">Terms+Conditions</a>
+        +
+        <a href="#" class="c">Privacy policy</a>
+      </div>
+    </div>
+  </body>
+</html>
