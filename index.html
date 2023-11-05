@@ -3,6 +3,47 @@
   <head>
     <title>Gold Pieces</title>
     <style type="text/css">
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 99999;
+        border-radius: 10px;
+      }
+
+      .modal-content {
+        background-color: white;
+        width: 300px;
+        margin: 100px auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* Hide the modal when not displayed */
+      .hidden {
+        display: none;
+      }
+
+      #yesButton {
+        padding: 8px 20px;
+        outline: none;
+        border: none;
+        background-color: green;
+        color: #fff;
+        border-radius: 30px;
+      }
+      #noButton {
+        padding: 8px 20px;
+        outline: none;
+        border: none;
+        background-color: red;
+        color: #fff;
+        border-radius: 30px;
+      }
       body {
         background: black;
         color: white;
@@ -181,6 +222,7 @@
         display: block;
       }
     </style>
+
     <style type="text/css">
       .topimg {
         margin-left: 10px;
@@ -307,6 +349,22 @@
   </head>
   <body>
     <div id="body">
+      <!-- pop up modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <p style="color: #191919; font-size: 17px">
+            Are you ready to explore Gold Pieces?
+          </p>
+          <button id="yesButton">Yes</button>
+          <button id="noButton">No</button>
+        </div>
+      </div>
+      <audio
+        style="opacity: 0"
+        id="closingAudio"
+        src="/mp3/runescape.mp3"
+      ></audio>
+      <!-- pop up modal -->
       <div>
         <div style="text-align: center; margin-bottom: 10px">
           <img src="./static/images/http (25).gif" alt="RuneScape" /><br />There
@@ -349,160 +407,51 @@
           <legend>Knowledge Base</legend>
           <ul>
             <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Explore the knowledge base</a>
+              <a href="https://runescape.wiki/w/Game_Guide"
+                >Explore the knowledge base</a
+              >
             </li>
             <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Getting started guide</a>
+              <a href="https://runescape.wiki/w/New_Player_Guide_to_RuneScape"
+                >Getting started guide</a
+              >
             </li>
             <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Read our rules</a>
+              <a href="https://runescape.wiki/w/RuneScape:Policies"
+                >Read our rules</a
+              >
             </li>
             <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Read the manual</a>
+              <a href="https://runescape.wiki/w/Skill_training_guides"
+                >Read the manual</a
+              >
             </li>
             <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Get hints for a quest</a>
+              <a href="https://runescape.wiki/w/Treasure_Trails"
+                >Get hints for a quest</a
+              >
             </li>
             <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Safety & Security guidelines</a>
+              <a href="https://runescape.wiki/w/RuneScape:Policies"
+                >Safety & Security guidelines</a
+              >
             </li>
             <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Customer Support</a>
+              <a href="RuneScape.com">Customer Support</a>
             </li>
             <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Comment on our service</a>
+              <a href="https://discord.com/invite/ZtmYqsT"
+                >Comment on our service</a
+              >
             </li>
             <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Report a bug/fault</a>
+              <a href="https://discord.com/invite/ZtmYqsT"
+                >Report a bug/fault</a
+              >
             </li>
           </ul>
         </fieldset>
-        <fieldset
-          class="menu"
-          style="background-image: url('./static/images/http\ \(51\).gif')"
-        >
-          <legend>Latest Poll</legend>
-          How do you like new weapons to be introduced to the game?
-          <ul>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Vote in this poll (Members only)</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">View previous polls</a>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset
-          class="menu"
-          style="background-image: url('./static/images/http\ \(14\).gif')"
-        >
-          <legend>Website Features</legend>
-          <ul>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">View the world map</a>
-            </li>
-            <li
-              style="list-style-image: url('./static/images/http\ \(20\).gif')"
-            >
-              <a href="#">View the hiscores</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Discuss the game on the forums</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Read stories and letters</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Download extra files</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Jagex Shop</a>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset
-          class="menu"
-          style="background-image: url('./static/images/http\ \(41\).gif')"
-        >
-          <legend>Membership</legend>
-          <ul>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Benefits of membership</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Start a new subscription</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Extend an existing subscription</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Cancel an existing subscription</a>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset
-          class="menu"
-          style="background-image: url('./static/images/http\ \(5\).gif')"
-        >
-          <legend>Account Management</legend>
-          <ul>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Read your messages from Jagex</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Change your password</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Set new recovery questions</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Cancel recovery questions</a>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset
-          class="menu"
-          style="background-image: url('./static/images/http\ \(8\).gif')"
-        >
-          <legend>Account Recovery</legend>
-          <ul>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Recover a lost password</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Recover a locked account</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Track a recovery request</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Appeal a ban</a>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset
-          class="menu"
-          style="background-image: url('./static/images/http\ \(7\).gif')"
-        >
-          <legend>Player Moderators</legend>
-          <ul>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Visit the player moderator centre</a>
-            </li>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">Find out about player mods</a>
-            </li>
-          </ul>
-          <br />
-        </fieldset>
-        <fieldset class="menu">
-          <legend>Gold Pieces</legend>
-          <ul>
-            <li style="list-style-image: url('./static/images/http (20).gif')">
-              <a href="#">RuneScape Classic</a>
-            </li>
-          </ul>
-        </fieldset>
+
         <a href="#" target="_top"
           ><img src="./static/images/http (24).gif" alt="Jagex Software"
         /></a>
@@ -725,10 +674,10 @@
         />
       </div>
       <div style="text-align: center; margin-bottom: 20px">
-        <audio controls autoplay loop>
+        <!-- <audio controls autoplay loop>
           <source src="./mp3/runescape.mp3" type="audio/mp3" />
           Your browser does not support the audio tag.
-        </audio>
+        </audio> -->
       </div>
       <div class="tandc">
         This webpage and its contents are copyright 1999 - 2006 Jagex Ltd.<br />
@@ -738,5 +687,83 @@
         <a href="#" class="c">Privacy policy</a>
       </div>
     </div>
+    <script>
+      // window.onload = function () {
+      //   var modal = document.getElementById("myModal");
+      //   modal.style.display = "block";
+
+      //   // Get the modal and buttons
+      //   const modal = document.getElementById("myModal");
+      //   const openModalButton = document.getElementById("openModal");
+      //   const yesButton = document.getElementById("yesButton");
+      //   const noButton = document.getElementById("noButton");
+
+      //   // Show the modal when the "Open Modal" button is clicked
+      //   openModalButton.addEventListener("click", function () {
+      //     modal.style.display = "block";
+      //   });
+
+      //   // Hide the modal and perform some action when "Yes" is clicked
+      //   yesButton.addEventListener("click", function () {
+      //     modal.style.display = "none";
+      //     alert("You clicked Yes.");
+      //   });
+
+      //   // Hide the modal when "No" is clicked
+      //   noButton.addEventListener("click", function () {
+      //     modal.style.display = "none";
+      //   });
+      // };
+      // Close the modal when clicking outside of it
+      //   window.onclick = function (event) {
+      //     var closeButton = document.getElementById("closeModal");
+      //     var closingAudio = document.getElementById("closingAudio");
+
+      //     if (closeButton) {
+      //       modal.style.display = "none";
+      //       closingAudio.play();
+      //     } else {
+      //       if (event.target === modal) {
+      //         modal.style.display = "none";
+      //       }
+      //       closingAudio.play();
+      //     }
+      //   };
+      // };
+
+      window.onload = function () {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+
+        // Close the modal when clicking outside of it
+        window.onclick = function (event) {
+          var closeButton = document.getElementById("closeModal");
+          var closingAudio = document.getElementById("closingAudio");
+
+          const yesButton = document.getElementById("yesButton");
+          const noButton = document.getElementById("noButton");
+
+          if (yesButton) {
+            modal.style.display = "none";
+            closingAudio.play();
+          } else {
+            if (noButton) {
+              modal.style.display = "none";
+              closingAudio.play();
+            }
+          }
+
+          // yesButton.addEventListener("click", function () {
+          //   modal.style.display = "none";
+          //   closingAudio.play();
+          // });
+
+          // // Hide the modal when "No" is clicked
+          // noButton.addEventListener("click", function () {
+          //   modal.style.display = "none";
+          // });
+        };
+      };
+    </script>
   </body>
 </html>
